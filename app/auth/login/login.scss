@@ -12,7 +12,6 @@ $padding-sm: 10px;
 $label-fent-size: 15px;
 $label-margin: 15px;
 
-
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -26,7 +25,6 @@ $label-margin: 15px;
         background: #555;
     }
 }
-
 
 input, textarea, select {
     box-shadow: none !important;
@@ -78,6 +76,7 @@ input, textarea, select {
                     color: $plain-white;
                     font-size: $font-med-size;
                     font-weight: bold;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
                     &:hover {
                         background-color: $text-color;
                     }
@@ -102,6 +101,7 @@ input, textarea, select {
                     font-size: $font-med-size;
                     font-weight: bold;
                     border: 1px solid $text-link-colour;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
                 }
             }
 
@@ -177,6 +177,7 @@ input, textarea, select {
                     color: $plain-white;
                     font-size: $font-med-size;
                     font-weight: bold;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
                     &:hover {
                         background-color: $text-color;
                     }
@@ -225,6 +226,7 @@ input, textarea, select {
         position: fixed;
         top: 0;
         bottom: 0;
+        background-color: #eeeeee;
         // right: 0;
     }
 }

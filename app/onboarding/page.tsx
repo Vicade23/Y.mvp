@@ -5,12 +5,16 @@ import './onboarding.scss'
 const Onboarding = () => {
   const [job, setJob] = useState<string>('')
   const [role, setRole] = useState<string>('')
+  const [uses, setUses] = useState<string>('')
+  const [awareness, setAwareness] = useState<string>('')
+  const [completed, setCompleted] = useState<boolean>(false)
 
   const onboarding = useRef<any>()
 
   const [stage1, setStage1] = useState<boolean>(false)
   const [stage2, setStage2] = useState<boolean>(false)
   const [stage3, setStage3] = useState<boolean>(false)
+  const [stage4, setStage4] = useState<boolean>(false)
   const stage01Page = useRef<any>()
   const stage02Page = useRef<any>()
   const stage03Page = useRef<any>()
@@ -24,6 +28,7 @@ const Onboarding = () => {
       const { scrollTop, offsetHeight } = onboarding.current;
       const index = Math.round(scrollTop / offsetHeight);
       setCurrent(index)
+      console.log(index)
     }
   }
 
@@ -58,6 +63,7 @@ const Onboarding = () => {
     const secondStageValue = element.getAttribute('id')
     console.log(secondStageValue)
     if(secondStageValue) {
+      setUses(secondStageValue)
       setStage2(true)
       setTimeout(() => {
         stage03Page.current?.scrollIntoView({
@@ -77,6 +83,7 @@ const Onboarding = () => {
   const validateStage3 = () => {
     console.log(stage03FirstSelect.current.value)
     if(stage03FirstSelect.current.value) {
+      setAwareness(stage03FirstSelect.current.value)
       setStage3(true)
       setTimeout(() => {
         stage04Page.current?.scrollIntoView({
@@ -85,13 +92,50 @@ const Onboarding = () => {
       }, 100)
     }
     else {
-      setStage1(false)
+      setStage3(false)
     }
     
   }
 
+  // forth stage 
+  const [stage4Select, setStage4Select] = useState<string>('')
+  const confirmForthStageSelect = (element: any) => {
+    console.log(element)
+    document.querySelectorAll('.stage-4-select').forEach((el) => {
+      el.classList.remove('stage-4-selected')
+    })
+    element.classList.add('stage-4-selected')
+    const forthStageValue: string = element.getAttribute('id')
+    console.log(forthStageValue)
+    if(forthStageValue) {
+      validateAllValues(forthStageValue)
+      setTimeout(() => {
+        setStage4(true)
+        // stage03Page.current?.scrollIntoView({
+        //   behavior: 'smooth'
+        // })
+      }, 300)
+    }
+    else{
+      setStage4(false)
+    }
+  }
 
 
+    const validateAllValues = (prefered_learning_pattern: string) => {
+      if(job && role && uses && awareness && prefered_learning_pattern) {
+
+        const allValues = {
+          job,
+          role,
+          uses,
+          awareness,
+          prefered_learning_pattern
+        }
+        console.log(allValues)
+        setCompleted(true)
+      }
+    }
 
 
 
@@ -172,7 +216,7 @@ const Onboarding = () => {
           <div className="select-container w-100 form-input">
 
             <select ref={stage03FirstSelect} onChange={validateStage3} className="select w-100 form-select-lg">
-              <option value="education" >From a collegue / friend</option>
+              <option value="friendOrCollegue" >From a collegue / friend</option>
               <option value="education">User Research</option>
               <option value="education">Agency / Consulting</option>
               <option value="education">Business Operations</option>
@@ -195,22 +239,22 @@ const Onboarding = () => {
 
           <div className="btns-container row w-100 mx-auto">
             <div className="col-6 d-flex align-items-center justify-content-center ps-0">
-              <button className="btn border w-100 h-100">
+              <button id='videos' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
                 Videos
               </button>
             </div>
             <div className="col-6 d-flex align-items-center justify-content-center pe-0">
-              <button className="btn border w-100 h-100">
+              <button id='articles' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
                 Articles
               </button>
             </div>
             <div className="col-6 d-flex align-items-center justify-content-center ps-0">
-              <button className="btn border w-100 h-100">
+              <button id='interactive_contents' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
                 Interactive Contents
               </button>
             </div>
             <div className="col-6 d-flex align-items-center justify-content-center pe-0">
-              <button className="btn border w-100 h-100">
+              <button id='group_duscussion' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
                 Group Duscussion
               </button>
             </div>
@@ -234,7 +278,7 @@ const Onboarding = () => {
           </div>
 
           <div className="px-1 col-3">
-            <div className="progress-bar"></div>
+            <div className={`${stage4 && completed && 'active'} progress-bar`}></div>
           </div>
 
         </div>

@@ -70,6 +70,7 @@ input:focus, textarea:focus, select:focus {
   color: #fff;
   font-size: 14px;
   font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .login .columns .contexts-container .auth-connection .auth-google-btn:hover {
@@ -95,6 +96,7 @@ input:focus, textarea:focus, select:focus {
   font-size: 14px;
   font-weight: bold;
   border: 1px solid #0d0c22;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .login .columns .contexts-container .terms-text-container {
@@ -168,6 +170,7 @@ input:focus, textarea:focus, select:focus {
   color: #fff;
   font-size: 14px;
   font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .login .columns .email-mood .auth-email-submit-container .auth-email-submit:hover {
@@ -216,4 +219,5 @@ input:focus, textarea:focus, select:focus {
   position: fixed;
   top: 0;
   bottom: 0;
+  background-color: #eeeeee;
 }

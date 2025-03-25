@@ -145,6 +145,12 @@ input:focus, textarea:focus, select:focus {
   transition: box-shadow 0.3s ease-in-out;
 }
 
+.onboarding .main .btns-container .stage-4-selected {
+  border: 0.1rem solid #99aaf0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
 .onboarding .progress-flow-container {
   position: fixed;
   bottom: 0;
