@@ -1,0 +1,230 @@
+$full-screen-height: 100vh;
+$font-sm-size: 12px;
+$font-med-size: 14px;
+$font-bg-size: 24px;
+$text-color: #3d3d4e;
+$text-link-colour: #0d0c22;
+$font-weight: 400;
+$margin-bottom: 40px;
+$plain-white: #fff;
+$max-form-width: 416px;
+$padding-sm: 10px;
+$label-fent-size: 15px;
+$label-margin: 15px;
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+    &:hover {
+        background: #555;
+    }
+}
+
+
+input, textarea, select {
+    box-shadow: none !important;
+    outline: none !important;
+    // border-color: inherit !important;
+    &:hover {
+        box-shadow: none !important;
+        outline: none !important;
+        // border-color: inherit !important;
+    }
+    &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+        // border-color: inherit !important;
+    }
+}
+
+
+.login {
+    background-color: $plain-white;
+    
+    .columns {
+        min-height: $full-screen-height;
+        .contexts-container {
+            // padding: 30px;
+            max-width: $max-form-width;
+            width: 100%;
+            @media (min-width: 992px) {
+                padding: 30px;
+            }
+            
+            @media (max-width: 524px) {
+                padding: 30px;
+            }
+
+            h2 {
+                margin-top: 40px;
+                font-size: 28px;
+                margin-bottom: $margin-bottom;
+                font-weight: bold;
+            }
+
+            .auth-connection {
+                .auth-google-btn {
+                    background-color: $text-link-colour;
+                    padding: 18px 20px;
+                    width: 100%;
+                    border-radius: 999px;
+                    color: $plain-white;
+                    font-size: $font-med-size;
+                    font-weight: bold;
+                    &:hover {
+                        background-color: $text-color;
+                    }
+                }
+            }
+
+            .or-container {
+                padding: 30px 0;
+                color: $text-color;
+                font-size: $font-sm-size;
+            }
+
+            
+            .auth-email {
+                margin-bottom: 40px;
+                .auth-email-btn {
+                    background-color: $plain-white;
+                    padding: 18px 20px;
+                    width: 100%;
+                    border-radius: 999px;
+                    color: $text-link-colour;
+                    font-size: $font-med-size;
+                    font-weight: bold;
+                    border: 1px solid $text-link-colour;
+                }
+            }
+
+            .terms-text-container {
+                margin-top: 20px;
+                font-size: $font-sm-size;
+                color: $text-color;
+                line-height: 18px;
+                opacity: .9;
+
+                .links {
+                    color: $text-link-colour;
+                    font-size: $font-sm-size;
+                    text-decoration: underline;
+                    font-weight: 500;
+                }
+            }
+
+            .acc-check {
+                margin-top: 20px;
+                color: $text-color;
+                font-size: $font-med-size;
+                .links {
+                    color: $text-link-colour;
+                    font-size: $font-sm-size;
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .email-mood {
+            .back-btn-container {
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 30px;
+                .back-btn {
+                    width: 40px;
+                    height: 40px;
+                    aspect-ratio: 1/1;
+                    padding: $padding-sm;
+                    background-color: $plain-white;
+                    // border: 1px solid $text-color;
+                    border-radius: 50%;
+                    font-size: $font-med-size;
+                    font-weight: bold;
+                }
+            }
+
+            .cols {
+                margin-bottom: 24px;
+                .label {
+                    margin: 14px 0 4px;
+                    font-size: $label-fent-size;
+                    font-weight: bold;
+                }
+                .input {
+                    font-size: $font-sm-size;
+                    border: 1px solid rgb(196, 196, 196);
+                    padding: 18px 20px;
+                    border-radius: 8px;
+                }
+
+            }
+            
+            .auth-email-submit-container {
+                .auth-email-submit {
+                    background-color: $text-link-colour;
+                    padding: 18px 20px;
+                    width: 100%;
+                    border-radius: 999px;
+                    color: $plain-white;
+                    font-size: $font-med-size;
+                    font-weight: bold;
+                    &:hover {
+                        background-color: $text-color;
+                    }
+                }
+            }
+            .termsCheckBox {
+                width: 25px;
+                aspect-ratio: 1/1;
+                border: 1px solid rgb(196, 196, 196);
+            }
+            .form-check {
+                margin-bottom: 24px;
+            }
+            
+            .form-check-label {
+                // margin-top: 20px;
+                font-size: $font-med-size;
+                color: $text-color;
+                line-height: 18px;
+                opacity: .9;
+                line-height: 18px;
+
+                .links {
+                    color: $text-link-colour;
+                    font-size: $font-med-size;
+                    text-decoration: underline;
+                    font-weight: 500;
+                }
+            }
+            .acc-check {
+                margin-top: 0;
+            }
+        }
+
+        .cover {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+        }
+    }
+    
+    .fixed-position {
+        width: inherit;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        // right: 0;
+    }
+}
