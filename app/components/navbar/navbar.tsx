@@ -47,18 +47,24 @@ const Navbar = () => {
                 </div>
 
                 <div className="auth-btns-container d-flex">
-                    <div className="login-btn-container pe-4 pe-lg-4">
+                    <div className="login-btn-container pe-4 pe-lg-4 d-none d-sm-block">
                         <Link href={'/auth/login'}>
                             <button className="btn">Log in</button>
                         </Link>
                     </div>
-                    <div className="signup-btn-container">
+                    <div className="signup-btn-container d-none d-sm-block">
                         <Link href={'/auth/signup'}>
                             <button className="btn">Sign up</button>
                         </Link>
                     </div>
+                    
+                    <div className="signup-btn-container d-block d-sm-none">
+                        <Link href={'/auth/login'}>
+                            <button className="btn">Log in</button>
+                        </Link>
+                    </div>
 
-                    <div className="launch-offcanvas-btn-container ms-4 ms-lg-4 d-flex d-lg-none justify-content-between align-items-center d-lg-none">
+                    <div className="launch-offcanvas-btn-container ms-3 ms-sm-4 ms-lg-4 d-flex d-lg-none justify-content-between align-items-center d-lg-none">
                         <button className="btn d-flex justify-content-between align-items-center" onClick={handleShow}>
                             <RxHamburgerMenu />
                         </button>
@@ -73,7 +79,7 @@ const Navbar = () => {
             </div>
         </div>
 
-        <div className="d-none d-lg-block">
+        <div className="d-none d-lg-block navbar-offcanvas">
             
             {/* <Button variant="primary" onClick={handleShow}>
                 Launch
@@ -81,11 +87,10 @@ const Navbar = () => {
 
             <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                <Offcanvas.Title>{BRANDNAME}</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                Some text as placeholder. In real life you can have the elements you
-                have chosen. Like, text, images, lists, etc.
+                    ...
                 </Offcanvas.Body>
             </Offcanvas>
 

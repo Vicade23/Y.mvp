@@ -12,6 +12,11 @@ $text-color: #3d3d4e;
     transition: .3s ease-in-out;
 }
 
+    .offcanvas-start {
+        max-width: 250px;
+    }
+.navbar-offcanvas {
+}
 .navbar {
     padding: 16px 0;
 
