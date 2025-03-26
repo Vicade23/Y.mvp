@@ -1,0 +1,102 @@
+$logo-font-size: 26px;
+$logo-font-weight: 500;
+$link-font-size-sm: 14px;
+$bg-color: #000;
+$btn-dark-color: #1e1f26;
+$plain-white: #fff;
+
+$text-color: #3d3d4e;
+
+* {
+    user-select: none;
+    transition: .3s ease-in-out;
+}
+
+.navbar {
+    padding: 16px 0;
+
+    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    .container {
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        .logo-container {
+            font-size: $logo-font-size;
+            letter-spacing: 1px;
+            font-weight: $logo-font-weight;
+            a {
+                // line-height: -10px;
+            }
+        }
+        .navigators-container {
+            margin-left: 60px;
+            color: #cfcfd0;
+            ul {
+                li {
+                    a {
+                        color: #5f6368;
+                        user-select: none;
+                        font-weight: 500;
+                        &:hover {
+                            color: $bg-color;
+                        }
+                    }
+                }
+            }
+        }
+        .auth-btns-container {
+            .login-btn-container {
+                .btn {
+                    width: 85px;
+                    padding: 10px 0;
+                    font-size: $link-font-size-sm;
+                    border-radius: 12px;
+                    font-weight: 500;
+                    color: #5f6368;
+                    border: 0.1rem solid $btn-dark-color;
+                    @media (max-width: 991px) {
+                        width: 80px;
+                        padding: 8px 0;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .signup-btn-container {
+                .btn {
+                    width: 85px;
+                    padding: 10px 0;
+                    font-size: $link-font-size-sm;
+                    border-radius: 12px;
+                    font-weight: 500;
+                    color: $plain-white;
+                    background-color: $btn-dark-color;
+                    border: 0.1rem solid $btn-dark-color;
+                    @media (max-width: 991px) {
+                        width: 80px;
+                        padding: 8px 0;
+                        font-size: 12px;
+                    }
+                    &:hover {
+                        background-color: $text-color;
+                    }
+                }
+            }
+        }
+
+        
+        .launch-offcanvas-btn-container {
+            .btn {
+                // width: 85px;
+                padding: 0;
+                font-size: 25px;
+                border-radius: 12px;
+                font-weight: 500;
+                color: #5f6368;
+                border: none;
+            }
+        }
+    }
+}

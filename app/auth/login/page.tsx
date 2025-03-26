@@ -5,10 +5,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { MdOutlineArrowBackIosNew } from 'react-icons/md'
 import SignUp from '../signup/page';
+import { BRANDNAME } from '@/app/constants/namingconstants';
+import { useRouter } from 'next/navigation';
 
 
 const Login = () => {
   const [emailMode, setEmailMode] = useState<boolean>(false)
+  
+  const router = useRouter()
 
   return (
     <div className='login w-100 container-xxl'>
@@ -18,10 +22,10 @@ const Login = () => {
           <div className="contexts-container">
             {!emailMode && <div className="">
                 
-              <h2>Sign in to Enzol</h2>
+              <h2>Sign in to {BRANDNAME}</h2>
 
               <div className="auth-connection">
-                <button className="btn auth-google-btn d-flex align-items-center justify-content-center">
+                <button onClick={() => {router.push('/onboarding')}} className="btn auth-google-btn d-flex align-items-center justify-content-center">
                   <span className='me-3'>
                     <Image src='/images/google icon.png' alt="google icon" width={25} height={25} />
                   </span> Sign in with Google
@@ -48,7 +52,7 @@ const Login = () => {
                 <button className="btn border back-btn d-flex justify-content-center align-items-center" onClick={() => {setEmailMode(false)}}><MdOutlineArrowBackIosNew /></button>
               </div>
                 
-                <h2>Sign in to Enzol</h2>
+                <h2>Sign in to {BRANDNAME}</h2>
 
                 <form className="form w-100">
                   <div className="row w-100 mx-auto">

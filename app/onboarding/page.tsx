@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react'
 import './onboarding.scss'
+import { BRANDNAME } from '../constants/namingconstants';
 
 const Onboarding = () => {
   const [job, setJob] = useState<string>('')
@@ -182,7 +183,7 @@ const Onboarding = () => {
       {stage1 && <main ref={stage02Page} className="main d-flex align-items-center justify-content-center">
         <div className="context-container">
           <div className='welcome-msg mb-0'>As a <b>{role}</b> in <b>{job}</b>,</div>
-          <h2 className='know-more'>what are you planning to use Enzol for?</h2>
+          <h2 className='know-more'>what are you planning to use {BRANDNAME} for?</h2>
 
           <div className="btns-container row w-100 mx-auto">
             <div className="col-6 d-flex align-items-center justify-content-center ps-0">
@@ -212,7 +213,7 @@ const Onboarding = () => {
       {stage2 && stage1 && <main ref={stage03Page} className="main d-flex align-items-center justify-content-center">
         <div className="context-container">
           <div className='welcome-msg'>That's great!</div>
-          <h2 className='know-more mb-2'>How did you hear about Enzol?</h2>
+          <h2 className='know-more mb-2'>How did you hear about {BRANDNAME}?</h2>
           <div className="select-container w-100 form-input">
 
             <select ref={stage03FirstSelect} onChange={validateStage3} className="select w-100 form-select-lg">
