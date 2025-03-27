@@ -1,7 +1,7 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './onboarding.scss'
-import { BRANDNAME } from '../constants/namingconstants';
+import { BRANDNAME } from '../../constants/namingconstants';
 
 const Onboarding = () => {
   const [job, setJob] = useState<string>('')

@@ -61,11 +61,12 @@ $text-color: #3d3d4e;
 .navbar-offcanvas {
 }
 .navbar {
-    padding: 16px 0;
+    padding: 12px;
 
     // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     .container {
+        padding: 10px 0;
         a {
             color: #000;
             text-decoration: none;

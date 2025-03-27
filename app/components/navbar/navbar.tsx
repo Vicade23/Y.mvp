@@ -1,11 +1,12 @@
 'use client';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './navbar.scss'
 import { BRANDNAME } from '@/app/constants/namingconstants'
 import Link from 'next/link'
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { RxHamburgerMenu } from 'react-icons/rx'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Navbar = () => {
 
@@ -13,18 +14,19 @@ const Navbar = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    
+//   useEffect(() => {
+//     if (typeof window !== "undefined") {
+//       require("bootstrap/dist/js/bootstrap.bundle.min.js");
+//     }
+//   }, []);
     
   return (
     <div className='navbar border-bottom'>
-        <div className="container">
+        <div className="container px-3">
             <div className="d-flex justify-content-between align-items-center w-100">
                 <div className="d-flex justify-content-between align-items-center">
-
-                    {/* <div className="launch-offcanvas-btn-container d-none me-3 d-sm-flex d-lg-none justify-content-between align-items-center d-lg-none">
-                        <button className="btn d-flex justify-content-between align-items-center mt-1" onClick={handleShow}>
-                            <RxHamburgerMenu />
-                        </button>
-                    </div> */}
 
                     <div className="logo-container"><Link href='/'>{BRANDNAME}</Link></div>
 
@@ -48,42 +50,34 @@ const Navbar = () => {
 
                 <div className="auth-btns-container d-flex">
                     <div className="login-btn-container pe-4 pe-lg-4 d-none d-sm-block">
-                        <Link href={'/auth/login'}>
+                        <Link href={'/login'}>
                             <button className="btn">Log in</button>
                         </Link>
                     </div>
                     <div className="signup-btn-container d-none d-sm-block">
-                        <Link href={'/auth/signup'}>
+                        <Link href={'/signup'}>
                             <button className="btn">Sign up</button>
                         </Link>
                     </div>
                     
                     <div className="signup-btn-container d-block d-sm-none">
-                        <Link href={'/auth/login'}>
+                        <Link href={'/login'}>
                             <button className="btn">Log in</button>
                         </Link>
                     </div>
 
                     <div className="launch-offcanvas-btn-container ms-3 ms-sm-4 ms-lg-4 d-flex d-lg-none justify-content-between align-items-center d-lg-none">
-                        <button className="btn d-flex justify-content-between align-items-center" onClick={handleShow}>
+                        <button className="btn d-flex justify-content-between align-items-center"  onClick={handleShow} >
                             <RxHamburgerMenu />
                         </button>
                     </div>
 
                 </div>
 
-                
-
-                
-
             </div>
         </div>
 
         <div className="d-none d-lg-block navbar-offcanvas">
-            
-            {/* <Button variant="primary" onClick={handleShow}>
-                Launch
-            </Button> */}
 
             <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header className='border-bottom' closeButton>
@@ -113,6 +107,8 @@ const Navbar = () => {
                     </div>
                 </Offcanvas.Body>
             </Offcanvas>
+
+        
 
         </div>
     </div>
