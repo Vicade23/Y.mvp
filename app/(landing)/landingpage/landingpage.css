@@ -160,6 +160,12 @@
   margin-bottom: 10px;
 }
 
+@media (max-width: 767px) {
+  .landingpage .container .section-2 .collaboration-container .h2 {
+    font-size: 28px;
+  }
+}
+
 .landingpage .container .section-2 .collaboration-container .sup-heading {
   font-size: 18px;
   color: #5f6368;
@@ -180,4 +186,115 @@
   justify-content: center;
   align-items: center;
   color: #5f6368;
+}
+
+.landingpage .container .section-3 {
+  margin: 120px 0;
+  padding: 60px 0;
+}
+
+@media (max-width: 767px) {
+  .landingpage .container .section-3 {
+    margin: 80px 0;
+  }
+}
+
+.landingpage .container .section-3 .card-container {
+  background-color: #fff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1), -10px -10px 30px rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingpage .container .section-3 .card-container .first-col {
+  padding: 20px;
+}
+
+@media (max-width: 991px) {
+  .landingpage .container .section-3 .card-container .first-col .sizer {
+    margin: 0 auto;
+    max-width: 550px;
+    text-align: center;
+  }
+}
+
+.landingpage .container .section-3 .card-container .first-col .h2 {
+  font-size: 34px;
+  color: #202124;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .landingpage .container .section-3 .card-container .first-col .h2 {
+    font-size: 28px;
+  }
+}
+
+.landingpage .container .section-3 .card-container .first-col .sub-heading {
+  font-size: 18px;
+  color: #5f6368;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+  .landingpage .container .section-3 .card-container .first-col .sub-heading {
+    font-size: 16px;
+  }
+}
+
+.landingpage .container .section-3 .card-container .first-col .btns-containers-container {
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .landingpage .container .section-3 .card-container .first-col .btns-containers-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .landingpage .container .section-3 .card-container .first-col .btns-containers-container {
+    font-size: 18px;
+  }
+}
+
+.landingpage .container .section-3 .card-container .first-col .btns-containers-container .btn-container .first-btn {
+  width: 150px;
+  padding: 15px 0;
+  font-size: 14px;
+  border-radius: 12px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #1e1f26;
+  border: 0.1rem solid #1e1f26;
+}
+
+@media (max-width: 767px) {
+  .landingpage .container .section-3 .card-container .first-col .btns-containers-container .btn-container .first-btn {
+    width: 130px;
+    padding: 12px 0;
+    font-size: 12px;
+  }
+}
+
+.landingpage .container .section-3 .card-container .first-col .btns-containers-container .btn-container .first-btn:hover {
+  background-color: #3d3d4e;
+}
+
+@media (max-width: 991px) {
+  .landingpage .container .section-3 .card-container .second-col {
+    margin-top: 0px;
+  }
+}
+
+.landingpage .container .section-3 .card-container .second-col img {
+  width: 100%;
+  height: 400px;
+}
+
+.landingpage .container-2 {
+  background-color: #f0f0f0;
 }
