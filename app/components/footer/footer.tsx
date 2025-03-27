@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="container">
             <div className="first-col row justify-content-between">
 
-                <div className="first-col-1 col-md-5 col-lg-4 col-xl-5 order-1 order-md-0">
+                <div className="first-col-1 col-lg-5 col-lg-4 col-xl-5 order-1 order-lg-0">
                     <div className="logo">{BRANDNAME}</div>
                     <div className="powered-by my-2">Project by Chakra Systems © 2025</div>
                     <div className="deployed-on-container d-flex">
@@ -30,7 +30,7 @@ const Footer = () => {
                 </div>
 
 
-                <div className="first-col-2 col-12 col-md-7 col-xl-7 row mx-auto order-0 order-md-1">
+                <div className="first-col-2 col-12 col-lg-7 col-xl-7 row mx-auto order-0 order-lg-1">
 
                     <div className="lists-cols col-12 col-sm-4 py-3 py-md-0">
                         <div className="row-header">Documentation</div>

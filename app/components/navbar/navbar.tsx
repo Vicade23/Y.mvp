@@ -36,7 +36,7 @@ const Navbar = () => {
     <div className="nav-container">
 
         <div className={` navbar border-bottom ${scrollY >= 50 && 'sticky-mode'}`}>
-            <div className="container px-3">
+            <div className="container ">
                 <div className="d-flex justify-content-between align-items-center w-100">
                     <div className="d-flex justify-content-between align-items-center">
 
