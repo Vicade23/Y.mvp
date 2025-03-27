@@ -86,11 +86,31 @@ const Navbar = () => {
             </Button> */}
 
             <Offcanvas show={show} onHide={handleClose}>
-                <Offcanvas.Header closeButton>
+                <Offcanvas.Header className='border-bottom' closeButton>
                 <Offcanvas.Title>{BRANDNAME}</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    ...
+                    <div className="offcanvas-container w-100">
+                        <ul className="ul p-0 m-0">
+                            <li className='border-bottom nav-lists'>
+                                <Link href={'/'}>Home</Link>
+                            </li>
+                            <li className='border-bottom nav-lists'>
+                                <Link href={'/'}>Pricing</Link>
+                            </li>
+                            <li className='border-bottom nav-lists'>
+                                <Link href={'/'}>About us</Link>
+                            </li>
+                            <li className='border-bottom nav-lists'>
+                                <Link href={'/'}>Contact</Link>
+                            </li>
+
+                            
+                            <li className='copyright-container'>
+                                <span className="special">@{BRANDNAME} 2025</span>
+                            </li>
+                        </ul>
+                    </div>
                 </Offcanvas.Body>
             </Offcanvas>
 

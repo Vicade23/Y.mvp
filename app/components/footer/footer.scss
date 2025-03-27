@@ -1,0 +1,74 @@
+
+* {
+    transition: none;
+}
+
+.footer {
+    width: 100%;
+    padding: 32px;
+    font-size: 14px;
+    letter-spacing: .3px;
+    font-weight: 500;
+    color: #212529;
+
+    @media (max-width: 574px) {
+        padding: 32px 0;
+    }
+
+    a {
+        color: #525258;
+        &:hover {
+            color: #000000;
+        }
+    }
+    .row-header {
+        color: #212529;
+    }
+    .logo {
+        color: #212529;
+    }
+
+    .first-col {
+        .first-col-1 {
+            .logo {
+                font-size: 26px;
+                font-weight: bold;
+                color: #212529;
+            }
+
+            .powered-by {
+
+            }
+
+            .deployed-on-container {
+                margin: 24px 0;
+                .vercel-logo {
+                    color: #212529;
+                    svg {
+                        color: #212529;
+                    }
+                }
+                .deployed {
+
+                }
+            }
+            img {
+                color: #52525b;
+            }
+        }
+        
+        .first-col-2 {
+            padding: 0 0 80px;
+            li {
+                display: flex;
+                margin: 16px 0;
+                width: 100%;
+                a {
+                    text-decoration: none;
+                    display: block;
+                    width: inherit;
+                }
+            }
+        }
+    }
+}

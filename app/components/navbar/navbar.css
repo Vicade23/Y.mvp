@@ -7,6 +7,57 @@
   max-width: 250px;
 }
 
+.offcanvas-start .offcanvas-body {
+  padding: 0;
+}
+
+.offcanvas-start .offcanvas-body .offcanvas-container {
+  height: 100%;
+  position: relative;
+}
+
+.offcanvas-start .offcanvas-body .offcanvas-container ul {
+  width: inherit;
+}
+
+.offcanvas-start .offcanvas-body .offcanvas-container ul .nav-lists {
+  display: block;
+  width: inherit;
+  height: 50px;
+  transition: .2s ease-in-out;
+}
+
+.offcanvas-start .offcanvas-body .offcanvas-container ul .nav-lists:hover {
+  background-color: rgba(81, 81, 81, 0.1);
+}
+
+.offcanvas-start .offcanvas-body .offcanvas-container ul .nav-lists a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offcanvas-start .offcanvas-body .offcanvas-container ul .copyright-container {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 20px;
+}
+
+.offcanvas-start .offcanvas-body .offcanvas-container ul .copyright-container .special {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+}
+
 .navbar {
   padding: 16px 0;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
