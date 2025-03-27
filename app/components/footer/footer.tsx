@@ -13,7 +13,7 @@ const Footer = () => {
 
                 <div className="first-col-1 col-lg-5 col-lg-4 col-xl-5 order-1 order-lg-0">
                     <div className="logo">{BRANDNAME}</div>
-                    <div className="powered-by my-2">Project by Chakra Systems © 2025</div>
+                    <div className="powered-by my-2">Project by Revo Systems © 2025</div>
                     <div className="deployed-on-container d-flex">
                         <span className="deployed">Deployed on</span>
 

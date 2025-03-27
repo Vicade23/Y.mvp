@@ -1,13 +1,12 @@
+'use client'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './globals.scss'
-import Onboarding from "../(auth)/onboarding/page";
-import Navbar from '../components/navbar/navbar';
-import Footer from '../components/footer/footer';
+import LandingPage from './landingpage/landingpage';
 
 export default function Home() {
   return (
     <div className="First-rendering">
-      
+      <LandingPage />
     </div>
   );
 }

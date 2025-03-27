@@ -1,0 +1,194 @@
+
+* {
+    letter-spacing: .5px;
+}
+
+.landingpage {
+    background-color: #fff;
+    .container {
+
+        .section-1 {
+            margin-top: 80px;
+            
+            @media (max-width: 991px) {
+                text-align: center;
+            }
+            .sizer {
+                @media (max-width: 991px) {
+                    text-align: center;
+                    max-width: 550px;
+                    margin: 0 auto;
+                }
+            }
+           .first-col {
+            .free-trial {
+                font-size: 12px;
+                color: #5f6368;
+                font-weight: 500;
+                letter-spacing: 1px;
+                margin-bottom: 16px;
+                @media (max-width: 991px) {
+                    
+                }
+            }
+            .heading {
+                font-size: 54px;
+                font-weight: bold;
+                color: #202124;
+                margin-bottom: 16px;
+                @media (max-width: 991px) {
+                    font-size: 48px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 36px;
+                }
+            }
+            .sub-heading {
+                font-size: 18px;
+                color: #5f6368;
+                margin-bottom: 16px;
+                @media (max-width: 991px) {
+                    
+                }
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                }
+            }
+            .btns-containers-container {
+                display: flex;
+                @media (max-width: 991px) {
+                    justify-content: center;
+                }
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                }
+
+                .btn-container {
+                    
+                    .first-btn {
+                        width: 150px;
+                        padding: 15px 0;
+                        font-size: 14px;
+                        border-radius: 12px;
+                        font-weight: 500;
+                        color: #fff;
+                        background-color: #1e1f26;
+                        border: 0.1rem solid #1e1f26;
+                        @media (max-width: 767px) {
+                            width: 130px;
+                            padding: 12px 0;
+                            font-size: 12px;
+                        }
+                        &:hover {
+                            background-color: #3d3d4e;
+                        }
+                    }
+                    
+
+                    
+                    .second-btn {
+                        width: 170px;
+                        padding: 15px 0;
+                        font-size: 14px;
+                        border-radius: 12px;
+                        font-weight: 500;
+                        color: #1e1f26;
+                        border: 0.1rem solid #1e1f26;
+                        margin-left: 24px;
+                        @media (max-width: 767px) {
+                            width: 120px;
+                            padding: 12px 0;
+                            font-size: 12px;
+                        }
+                    }
+
+                    
+            // .auth-btns-container {
+            //     .login-btn-container {
+            //         .btn {
+            //             width: 85px;
+            //             padding: 10px 0;
+            //             font-size: $link-font-size-sm;
+            //             border-radius: 12px;
+            //             font-weight: 500;
+            //             color: #5f6368;
+            //             border: 0.1rem solid $btn-dark-color;
+            //             @media (max-width: 991px) {
+            //                 width: 80px;
+            //                 padding: 8px 0;
+            //                 font-size: 12px;
+            //             }
+            //         }
+            //     }
+
+            //     .signup-btn-container {
+            //     }
+            // }
+                    
+
+
+
+
+
+                }
+
+            }
+           } 
+
+           .second-col {
+            img {
+                width: 100%;
+            }
+            @media (max-width: 991px) {
+                margin-top: 120px;
+            }
+            @media (max-width: 767px) {
+                margin-top: 40px;
+            }
+           }
+        }
+
+
+        .section-2 {
+            margin-top: 120px;
+            @media (max-width: 767px) {
+                margin-top: 80px;
+            }
+            .collaboration-container {
+                text-align: center;
+                color: #202124;
+                font-weight: 500;
+
+                .h2 {
+                    font-size: 34px;
+                    color: #202124;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+                .sup-heading {
+                    font-size: 18px;
+                    color: #5f6368;
+                    margin-bottom: 60px;
+                    @media (max-width: 767px) {
+                        font-size: 16px;
+                    }
+                }
+
+                .collab-container {
+                    height: 80px;
+                    font-size: 18px;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #5f6368;
+                }
+            }
+        }
+
+
+    }
+}
+
+// 191A1C
+// {/* gladstone engineering, microsoft dev, google dev, revo  */}

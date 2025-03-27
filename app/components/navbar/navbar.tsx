@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import './navbar.scss'
 import { BRANDNAME } from '@/app/constants/namingconstants'
 import Link from 'next/link'
-import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { RxHamburgerMenu } from 'react-icons/rx'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -35,7 +34,7 @@ const Navbar = () => {
   return (
     <div className="nav-container">
 
-        <div className={` navbar border-bottom ${scrollY >= 50 && 'sticky-mode'}`}>
+        <div className={` navbar ${scrollY >= 50 && 'sticky-mode'}`}>
             <div className="container ">
                 <div className="d-flex justify-content-between align-items-center w-100">
                     <div className="d-flex justify-content-between align-items-center">

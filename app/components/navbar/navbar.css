@@ -1,5 +1,11 @@
-* {
-  user-select: none;
+*::selection {
+  background: #102a43;
+  color: #d4af37;
+}
+
+*::-moz-selection {
+  background: #102a43;
+  color: #d4af37;
 }
 
 .nav-container {
@@ -7,7 +13,7 @@
 }
 
 .nav-container .navbar {
-  padding: 12px;
+  padding: 12px 0;
   box-shadow: none;
   position: fixed;
   top: 0;
@@ -18,7 +24,7 @@
 }
 
 .nav-container .navbar .container {
-  padding: 10px 0;
+  padding: 10px;
 }
 
 .nav-container .navbar .container a {
