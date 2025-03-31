@@ -5,7 +5,10 @@ import { BRANDNAME } from '@/app/constants/namingconstants'
 import Link from 'next/link'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { RxHamburgerMenu } from 'react-icons/rx'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { IoHome, IoPricetags } from 'react-icons/io5';
+import { FaMessage, FaUsers } from 'react-icons/fa6';
+import { MdMessage } from 'react-icons/md';
 
 const Navbar = () => {
 
@@ -25,11 +28,6 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [])
     
-//   useEffect(() => {
-//     if (typeof window !== "undefined") {
-//       require("bootstrap/dist/js/bootstrap.bundle.min.js");
-//     }
-//   }, []);
     
   return (
     <div className="nav-container">
@@ -97,17 +95,37 @@ const Navbar = () => {
                     <Offcanvas.Body>
                         <div className="offcanvas-container w-100">
                             <ul className="ul p-0 m-0">
-                                <li className='border-bottom nav-lists'>
-                                    <Link href={'/'}>Home</Link>
+                                <li className=' nav-lists'>
+                                    <Link href={'/'} className='active'>
+                                        <span className="icon me-3">
+                                            <IoHome />
+                                        </span>
+                                        Home
+                                    </Link>
                                 </li>
-                                <li className='border-bottom nav-lists'>
-                                    <Link href={'/'}>Pricing</Link>
+                                <li className=' nav-lists'>
+                                    <Link href={'/'}>
+                                        <span className="icon me-3">
+                                            <IoPricetags />
+                                        </span>
+                                        Pricing
+                                    </Link>
                                 </li>
-                                <li className='border-bottom nav-lists'>
-                                    <Link href={'/'}>About us</Link>
+                                <li className=' nav-lists'>
+                                    <Link href={'/'}>
+                                        <span className="icon me-3">
+                                            <FaUsers />
+                                        </span>
+                                        About us
+                                    </Link>
                                 </li>
-                                <li className='border-bottom nav-lists'>
-                                    <Link href={'/'}>Contact</Link>
+                                <li className=' nav-lists'>
+                                    <Link href={'/'}>
+                                        <span className="icon me-3">
+                                            <MdMessage />
+                                        </span>
+                                        Contact
+                                    </Link>
                                 </li>
 
                                 

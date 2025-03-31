@@ -147,7 +147,7 @@
 
 @media (max-width: 767px) {
   .landingpage .container .section-2 {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 }
 
@@ -193,6 +193,14 @@
   user-select: none;
 }
 
+.landingpage .container .section-2 .collaboration-container .collab-container span {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+
 .landingpage .container .section-3 {
   margin-top: 120px;
   padding: 80px 0;
@@ -200,7 +208,7 @@
 
 @media (max-width: 767px) {
   .landingpage .container .section-3 {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 }
 
@@ -312,7 +320,7 @@
 
 @media (max-width: 767px) {
   .landingpage .container .section-4 {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 }
 
@@ -425,6 +433,12 @@
   margin-top: 60px;
 }
 
+@media (max-width: 767px) {
+  .landingpage .container .section-4 .card-container-2 {
+    margin-top: 0px;
+  }
+}
+
 .landingpage .container .section-4 .card-container-2 .first-col {
   padding: 20px;
 }
@@ -532,7 +546,7 @@
 
 @media (max-width: 767px) {
   .landingpage .container .section-5 {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 }
 
@@ -671,7 +685,7 @@
 
 @media (max-width: 767px) {
   .landingpage .container .section-6 {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 }
 
@@ -788,6 +802,6 @@
 
 @media (max-width: 767px) {
   .landingpage .container .section-7 {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 }

@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Getstartedcard from '@/app/components/getstartedcard/getstartedcard';
+import { FaGithub, FaGoogle, FaMicrosoft } from 'react-icons/fa6'
 
 
 
@@ -79,21 +80,26 @@ const LandingPage = () => {
 
               <div className="col-6 col-sm-3 collab-container">
                 <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
-                  Gladstone
+                  {/* Gladstone */}
+                  <span className='bi bi-github me-2'><FaGithub /></span>
+                  GitHub
                 </div>
-              </div>
+              </div> 
               <div className="col-6 col-sm-3 collab-container">
                 <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
+                  <span className='bi bi-google me-2'><FaGoogle /></span>
                   Google
                 </div>
               </div>
               <div className="col-6 col-sm-3 collab-container">
                 <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
+                  <span className='bi bi-microsoft me-2'><FaMicrosoft /></span>
                   Microsoft 
                 </div>
               </div>
               <div className="col-6 col-sm-3 collab-container">
                 <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
+                  <span className='bi me-2'>RV</span>
                   Revo 
                 </div>
               </div>
@@ -126,7 +132,7 @@ const LandingPage = () => {
                     </div>
                   </div>
                   <div className="second-col col-12 col-lg-6">
-                    <Image src='/images/Interaction.svg' alt="google icon" width={100} height={100} />
+                    <Image src='/images/goal.svg' alt="google icon" width={100} height={100} />
                   </div>
                 </div>
               </section>
