@@ -81,7 +81,7 @@ const SignUp = () => {
                     <div className="col-12 form-check d-flex align-items-start p-0">
                       <input type="checkbox" className='termsCheckBox' id='termsCheckBox' />
                       <label htmlFor="termsCheckBox" className="label form-check-label ps-3">
-                        I agree with {BRANDNAME}'s  <Link href={'#'} className='links'>Terms of Service</Link>, <Link href={'#'} className='links'>Privacy Policy</Link>, and our default <Link href={'#'} className='links'>Notification Settings</Link>
+                        I agree with {BRANDNAME}{`'`}s  <Link href={'#'} className='links'>Terms of Service</Link>, <Link href={'#'} className='links'>Privacy Policy</Link>, and our default <Link href={'#'} className='links'>Notification Settings</Link>
                       </label>
                       {/* <label htmlFor="username" className="label">Username</label>
                       <input type="radio" id='username' className='w-100 input form-control' /> */}

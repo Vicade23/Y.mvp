@@ -146,7 +146,7 @@ const Onboarding = () => {
       <main ref={stage01Page} className="main d-flex align-items-center justify-content-center">
         <div className="context-container">
           <div className='welcome-msg'>Welcome <b>Emmanuel</b>!</div>
-          <h2 className='know-more'>We'd love to know a bit more about you...</h2>
+          <h2 className='know-more'>We{`'`}d love to know a bit more about you...</h2>
           <h2 className='work'>What kind of work do you do?</h2>
           <div className="select-container w-100 form-input">
 
@@ -162,7 +162,7 @@ const Onboarding = () => {
               <option value="Software Development">Software Development</option>
             </select>
           </div>
-          <h2 className='work'>What's your role?</h2>
+          <h2 className='work'>What{`'`}s your role?</h2>
 
           <div className="select-container w-100 form-input">
             <select ref={stage01SecondSelect} onChange={validateStage1} className="select w-100 form-select-lg">
@@ -212,7 +212,7 @@ const Onboarding = () => {
       
       {stage2 && stage1 && <main ref={stage03Page} className="main d-flex align-items-center justify-content-center">
         <div className="context-container">
-          <div className='welcome-msg'>That's great!</div>
+          <div className='welcome-msg'>That{`'`}s great!</div>
           <h2 className='know-more mb-2'>How did you hear about {BRANDNAME}?</h2>
           <div className="select-container w-100 form-input">
 

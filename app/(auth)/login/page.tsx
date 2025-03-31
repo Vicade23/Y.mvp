@@ -7,7 +7,6 @@ import { MdOutlineArrowBackIosNew } from 'react-icons/md'
 import SignUp from '../signup/page';
 import { BRANDNAME } from '@/app/constants/namingconstants';
 import { useRouter } from 'next/navigation';
-import AuthLayout from '../../layout';
 
 
 const Login = () => {

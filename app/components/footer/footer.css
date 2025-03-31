@@ -9,7 +9,13 @@
   letter-spacing: .3px;
   font-weight: 500;
   color: #212529;
-  margin-top: 20px;
+  margin-top: 120px;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    margin-top: 80px;
+  }
 }
 
 @media (max-width: 574px) {
@@ -27,7 +33,7 @@
 }
 
 .footer .row-header {
-  color: #212529;
+  color: #202124;
   font-size: 16px;
 }
 

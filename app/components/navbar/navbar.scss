@@ -72,7 +72,7 @@ $text-color: #3d3d4e;
                         padding: 10px 0;
                         font-size: $link-font-size-sm;
                         border-radius: 12px;
-                        font-weight: 500;
+                        font-weight: 600 !important;
                         color: #5f6368;
                         border: 0.1rem solid $btn-dark-color;
                         @media (max-width: 991px) {
@@ -89,7 +89,7 @@ $text-color: #3d3d4e;
                         padding: 10px 0;
                         font-size: $link-font-size-sm;
                         border-radius: 12px;
-                        font-weight: 500;
+                        font-weight: 600 !important;
                         color: $plain-white;
                         background-color: $btn-dark-color;
                         border: 0.1rem solid $btn-dark-color;
@@ -122,6 +122,7 @@ $text-color: #3d3d4e;
     
     .sticky-mode {
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        z-index: 9999;
     }
 }
 
