@@ -77,22 +77,22 @@ const LandingPage = () => {
             <div className="sup-heading">Trusted by individuals and teams at the world{`'`}s best companies</div>
             <div className="row mx-auto">
 
-              <div className="col-6 col-lg-3 collab-container">
+              <div className="col-6 col-sm-3 collab-container">
                 <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
                   Gladstone
                 </div>
               </div>
-              <div className="col-6 col-lg-3 collab-container">
+              <div className="col-6 col-sm-3 collab-container">
                 <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
                   Google
                 </div>
               </div>
-              <div className="col-6 col-lg-3 collab-container">
+              <div className="col-6 col-sm-3 collab-container">
                 <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
                   Microsoft 
                 </div>
               </div>
-              <div className="col-6 col-lg-3 collab-container">
+              <div className="col-6 col-sm-3 collab-container">
                 <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
                   Revo 
                 </div>
