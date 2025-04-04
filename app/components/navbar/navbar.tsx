@@ -49,7 +49,7 @@ const Navbar = () => {
                                 <Link href={'/'}>Pricing</Link>
                             </li>
                             <li className='d-flex justify-content-center align-items-center px-3 px-lg-4'>
-                                <Link href={'/'}>About us</Link>
+                                <Link href={'/about-us'}>About us</Link>
                             </li>
                             <li className='d-flex justify-content-center align-items-center px-3 px-lg-4'>
                                 <Link href={'/'}>Contact</Link>
@@ -112,7 +112,7 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li className=' nav-lists'>
-                                    <Link href={'/'}>
+                                    <Link href={'/about-us'}>
                                         <span className="icon me-3">
                                             <FaUsers />
                                         </span>
