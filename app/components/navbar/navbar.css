@@ -107,6 +107,16 @@
   z-index: 9;
 }
 
+.nav-container .navbar-2 {
+  padding: 12px 0;
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #ffffff;
+}
+
 @media (min-width: 992px) {
   .offcanvas-backdrop {
     display: none !important;
@@ -121,6 +131,21 @@
   .offcanvas {
     display: none !important;
   }
+}
+
+.offcanvas .btn-close {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.offcanvas .btn-close:hover {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.offcanvas .btn-close:focus {
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .offcanvas ::-webkit-scrollbar,

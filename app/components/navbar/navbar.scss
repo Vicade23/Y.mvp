@@ -4,7 +4,6 @@ $link-font-size-sm: 14px;
 $bg-color: #000;
 $btn-dark-color: #1e1f26;
 $plain-white: #fff;
-
 $text-color: #3d3d4e;
 
 * {
@@ -19,6 +18,9 @@ $text-color: #3d3d4e;
         color: #d4af37;
     }
 }
+
+
+
 
 
 .nav-container {
@@ -125,6 +127,15 @@ $text-color: #3d3d4e;
         z-index: 9;
         // border-bottom: 0.1rem solid #dee2e6;
     }
+    .navbar-2 {
+        padding: 12px 0;
+        box-shadow: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: #ffffff;
+    }
 }
 
 .offcanvas-backdrop {
@@ -138,6 +149,22 @@ $text-color: #3d3d4e;
 
     @media (min-width: 992px) {
         display: none !important;
+    }
+
+    .btn-close {
+        box-shadow: none !important;
+        outline: none !important;
+        // border-color: inherit !important;
+        &:hover {
+            box-shadow: none !important;
+            outline: none !important;
+            // border-color: inherit !important;
+        }
+        &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            // border-color: inherit !important;
+        }
     }
     
     ::-webkit-scrollbar,

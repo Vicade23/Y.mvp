@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <div className="nav-container">
 
-        <div className={` navbar ${scrollY >= 50 && 'sticky-mode'}`}>
+        <div className={` navbar ${scrollY >= 1 && 'sticky-mode'} ${scrollY <= 520 && pathname === '/about-us' && 'navbar-2'}`}>
             <div className="container ">
                 <div className="d-flex justify-content-between align-items-center w-100">
                     <div className="d-flex justify-content-between align-items-center">
@@ -49,7 +49,7 @@ const Navbar = () => {
                                 <Link href={'/'}>Home</Link>
                             </li>
                             <li className='d-flex justify-content-center align-items-center px-3 px-lg-4'>
-                                <Link href={'/'}>Pricing</Link>
+                                <Link href={'/pricing'}>Pricing</Link>
                             </li>
                             <li className='d-flex justify-content-center align-items-center px-3 px-lg-4'>
                                 <Link href={'/about-us'}>About us</Link>
@@ -107,7 +107,7 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li className=' nav-lists'>
-                                    <Link href={'/'} onClick={handleClose} className={`${pathname === '/pricing' && 'active'}`}>
+                                    <Link href={'/pricing'} onClick={handleClose} className={`${pathname === '/pricing' && 'active'}`}>
                                         <span className="icon me-3">
                                             <IoPricetags />
                                         </span>
