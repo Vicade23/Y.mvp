@@ -96,7 +96,7 @@ const Navbar = () => {
                         <div className="offcanvas-container w-100">
                             <ul className="ul p-0 m-0">
                                 <li className=' nav-lists'>
-                                    <Link href={'/'} className='active'>
+                                    <Link href={'/'} onClick={handleClose} className='active'>
                                         <span className="icon me-3">
                                             <IoHome />
                                         </span>
@@ -104,7 +104,7 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li className=' nav-lists'>
-                                    <Link href={'/'}>
+                                    <Link href={'/'} onClick={handleClose} >
                                         <span className="icon me-3">
                                             <IoPricetags />
                                         </span>
@@ -112,7 +112,7 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li className=' nav-lists'>
-                                    <Link href={'/about-us'}>
+                                    <Link href={'/about-us'} onClick={handleClose} >
                                         <span className="icon me-3">
                                             <FaUsers />
                                         </span>
@@ -120,7 +120,7 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li className=' nav-lists'>
-                                    <Link href={'/contact-us'}>
+                                    <Link href={'/contact-us'} onClick={handleClose} >
                                         <span className="icon me-3">
                                             <MdMessage />
                                         </span>
