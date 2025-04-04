@@ -95,6 +95,7 @@
 }
 
 .nav-container .navbar .container .launch-offcanvas-btn-container .btn {
+  padding: 0;
   font-size: 25px;
   border-radius: 12px;
   font-weight: 500;
