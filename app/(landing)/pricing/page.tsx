@@ -2,7 +2,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className="pricing"></div>
+    <div className="pricing">
+      
+    </div>
   )
 }
 

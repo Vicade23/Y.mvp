@@ -1,5 +1,75 @@
-.contact-us {
-  margin-top: 40px;
+.contact-us .section-1 {
+  text-align: center;
+}
+
+.contact-us .section-1 .hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+@media (max-width: 991px) {
+  .contact-us .section-1 .hero {
+    height: 400px;
+  }
+}
+
+.contact-us .section-1 .hero .cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.contact-us .section-1 .hero .cover .sizer {
+  margin: 0 auto;
+  max-width: 550px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-us .section-1 .hero .cover .sizer .h2 {
+  font-size: 34px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .contact-us .section-1 .hero .cover .sizer .h2 {
+    font-size: 28px;
+  }
+}
+
+.contact-us .section-1 .hero .cover .sizer .tests-subtitle {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 767px) {
+  .contact-us .section-1 .hero .cover .sizer .tests-subtitle {
+    font-size: 16px;
+  }
+}
+
+.contact-us .section-1 .hero .img-container {
+  width: inherit;
+  height: inherit;
+  background-image: url(./../../../public/images/contact.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact-us .conts {
+  margin-top: 80px;
 }
 
 .contact-us .h2 {

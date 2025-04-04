@@ -262,7 +262,7 @@ const LandingPage = () => {
               <Swiper modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
                 slidesPerView={slidderPgSize}
-                // navigation
+                navigation={screenWidth >= 768 && screenWidth <= 991 && true}
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}

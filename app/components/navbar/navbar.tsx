@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <div className="nav-container">
 
-        <div className={` navbar ${scrollY >= 1 && 'sticky-mode'} ${scrollY <= 510 && pathname === '/about-us' && 'navbar-2'}`}>
+        <div className={` navbar ${scrollY >= 1 && 'sticky-mode'} ${scrollY <= 510 && pathname === '/about-us' && 'navbar-2'} ${scrollY <= 510 && pathname === '/contact-us' && 'navbar-2'}`}>
             <div className="container ">
                 <div className="d-flex justify-content-between align-items-center w-100">
                     <div className="d-flex justify-content-between align-items-center">
