@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { IoHome, IoPricetags } from 'react-icons/io5';
 import { FaMessage, FaUsers } from 'react-icons/fa6';
 import { MdMessage } from 'react-icons/md';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 const Navbar = () => {
 
@@ -18,15 +19,17 @@ const Navbar = () => {
     const handleShow = () => setShow(true);
     const [scrollY, setScrollY] = useState<number>(0)
 
-    const scrollPosition = () => {
-
-    }
-
     useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [])
+
+    
+    useEffect(() => {
+    }, [])
+
+    const pathname = usePathname();
     
     
   return (
@@ -76,9 +79,9 @@ const Navbar = () => {
                         </div>
 
                         <div className="launch-offcanvas-btn-container ms-3 ms-sm-4 ms-lg-4 d-flex d-lg-none justify-content-between align-items-center d-lg-none">
-                            <button className="btn d-flex justify-content-between align-items-center"  onClick={handleShow} >
+                            <button className="btn d-flex justify-content-between align-items-center border"  onClick={handleShow} >
                                 <RxHamburgerMenu />
-                            </button>
+                            </button> 
                         </div>
 
                     </div>
@@ -96,7 +99,7 @@ const Navbar = () => {
                         <div className="offcanvas-container w-100">
                             <ul className="ul p-0 m-0">
                                 <li className=' nav-lists'>
-                                    <Link href={'/'} onClick={handleClose} className='active'>
+                                    <Link href={'/'} onClick={handleClose} className={`${pathname === '/' && 'active'}`}>
                                         <span className="icon me-3">
                                             <IoHome />
                                         </span>
@@ -104,7 +107,7 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li className=' nav-lists'>
-                                    <Link href={'/'} onClick={handleClose} >
+                                    <Link href={'/'} onClick={handleClose} className={`${pathname === '/pricing' && 'active'}`}>
                                         <span className="icon me-3">
                                             <IoPricetags />
                                         </span>
@@ -112,7 +115,7 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li className=' nav-lists'>
-                                    <Link href={'/about-us'} onClick={handleClose} >
+                                    <Link href={'/about-us'} onClick={handleClose} className={`${pathname === '/about-us' && 'active'}`} >
                                         <span className="icon me-3">
                                             <FaUsers />
                                         </span>
@@ -120,7 +123,7 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li className=' nav-lists'>
-                                    <Link href={'/contact-us'} onClick={handleClose} >
+                                    <Link href={'/contact-us'} onClick={handleClose} className={`${pathname === '/contact-us' && 'active'}`} >
                                         <span className="icon me-3">
                                             <MdMessage />
                                         </span>
