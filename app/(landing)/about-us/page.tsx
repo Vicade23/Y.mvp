@@ -38,7 +38,7 @@ const AboutUs = () => {
 
         <div className="container">
             
-          <section className="section-3">
+          <section className="section-2">
 
             <div className="sizer">
               <h2 className="h2">Our mission</h2>
