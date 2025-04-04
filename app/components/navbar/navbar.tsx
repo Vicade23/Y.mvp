@@ -79,7 +79,7 @@ const Navbar = () => {
                         </div>
 
                         <div className="launch-offcanvas-btn-container ms-3 ms-sm-4 ms-lg-4 d-flex d-lg-none justify-content-between align-items-center d-lg-none">
-                            <button className="btn d-flex justify-content-between align-items-center"  onClick={handleShow} >
+                            <button className="btn d-flex justify-content-between align-items-center border"  onClick={handleShow} >
                                 <RxHamburgerMenu />
                             </button> 
                         </div>
