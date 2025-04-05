@@ -12,7 +12,7 @@ const page = () => {
             <div className="container h-100">
 
               <div className="sizer">
-                <h2 className="h2">About us</h2>
+                <h2 className="h2">Contact us</h2>
                 <div className="tests-subtitle">
                   Here you can talk about your team and why people should join your company
                 </div>
