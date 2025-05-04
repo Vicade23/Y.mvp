@@ -12,7 +12,8 @@ const Footer = () => {
             <div className="first-col row justify-content-between">
 
                 <div className="first-col-1 col-lg-5 col-lg-4 col-xl-5 order-1 order-lg-0">
-                    <div className="logo">{BRANDNAME}</div>
+                    <Image src='/images/enzol-logo3.png' className='me-1' alt="google icon" width={110} height={30} />
+                    {/* <div className="logo">{BRANDNAME}</div> */}
                     <div className="powered-by my-2">Project by Revo Systems © 2025</div>
                     <div className="deployed-on-container d-flex">
                         <span className="deployed">Deployed on</span>
