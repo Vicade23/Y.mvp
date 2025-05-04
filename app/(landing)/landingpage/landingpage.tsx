@@ -80,27 +80,31 @@ const LandingPage = () => {
 
               <div className="col-6 col-sm-3 collab-container">
                 <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
+                  {/* <span className='bi me-2'>RV</span> */}
+                  <Image src='/images/Revo_grey-logo.png' className='me-2' alt="google icon" width={24} height={24} />
+                  Revo 
+                </div>
+              </div>
+
+              <div className="col-6 col-sm-3 collab-container">
+                <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
                   {/* Gladstone */}
                   <span className='bi bi-github me-2'><FaGithub /></span>
                   GitHub
                 </div>
               </div> 
+
               <div className="col-6 col-sm-3 collab-container">
                 <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
                   <span className='bi bi-google me-2'><FaGoogle /></span>
                   Google
                 </div>
               </div>
+
               <div className="col-6 col-sm-3 collab-container">
                 <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
                   <span className='bi bi-microsoft me-2'><FaMicrosoft /></span>
                   Microsoft 
-                </div>
-              </div>
-              <div className="col-6 col-sm-3 collab-container">
-                <div className="w-100 h-100 d-flex align-items-center text-center justify-content-center">
-                  <span className='bi me-2'>RV</span>
-                  Revo 
                 </div>
               </div>
 
@@ -263,6 +267,7 @@ const LandingPage = () => {
                 spaceBetween={50}
                 slidesPerView={slidderPgSize}
                 navigation={screenWidth >= 768 && screenWidth <= 991 && true}
+                // navigation={true}
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}

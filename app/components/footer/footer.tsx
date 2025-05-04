@@ -25,7 +25,7 @@ const Footer = () => {
                         </span>
                     </div>
                     <div className="maintain-container">
-                        Maintained by <Link href={''}>Sage</Link> and contributors
+                        Maintained by <Link href={''}>Revo</Link> and contributors
                     </div>
                 </div>
 

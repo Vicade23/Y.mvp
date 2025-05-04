@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { IoHome, IoPricetags } from 'react-icons/io5';
 import { FaMessage, FaUsers } from 'react-icons/fa6';
 import { MdMessage } from 'react-icons/md';
+import Image from 'next/image'
 import { usePathname, useSearchParams } from 'next/navigation';
 
 const Navbar = () => {
@@ -40,6 +41,7 @@ const Navbar = () => {
                 <div className="d-flex justify-content-between align-items-center w-100">
                     <div className="d-flex justify-content-between align-items-center">
 
+                        <Image src='/images/enzol-logo-trans-bg.png' alt="google icon" width={35} height={35} />
                         <div className="logo-container"><Link href='/'>{BRANDNAME}</Link></div>
 
                     </div>

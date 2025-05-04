@@ -62,7 +62,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .onboarding .main .select-container .select {
-  font-size: 16px;
+  font-size: .9rem;
   padding: 12px;
   border: 2px solid #ddd;
   border-radius: 8px;
@@ -108,14 +108,14 @@ input:focus, textarea:focus, select:focus {
 }
 
 .onboarding .main .context-container .know-more {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 30px;
   letter-spacing: -0.5px;
   font-weight: 400;
 }
 
 .onboarding .main .context-container .work {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 15px;
   letter-spacing: -0.5px;
   font-weight: 400;
@@ -170,5 +170,5 @@ input:focus, textarea:focus, select:focus {
 }
 
 .onboarding .progress-flow-container .active {
-  background-color: #6891bc;
+  background-color: #212529;
 }
