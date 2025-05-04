@@ -142,7 +142,7 @@ const Onboarding = () => {
 
   return (
     <div ref={onboarding} className="onboarding" onScroll={handleScroll}>
-
+ 
       <main ref={stage01Page} className="main d-flex align-items-center justify-content-center">
         <div className="context-container">
           <div className='welcome-msg'>Welcome <b>Emmanuel</b>!</div>
