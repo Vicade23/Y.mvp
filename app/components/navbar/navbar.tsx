@@ -97,7 +97,7 @@ const Navbar = () => {
                     <Offcanvas.Header className='border-bottom' closeButton>
                         <Offcanvas.Title>
                             <Image src='/images/enzol-logo-trans-bg.png' className='me-1' alt="google icon" width={20} height={30} />
-                            {BRANDNAME}
+                            {BRANDNAMELOGO}
                         </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
