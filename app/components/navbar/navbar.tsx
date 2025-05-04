@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react'
 import './navbar.scss'
-import { BRANDNAME } from '@/app/constants/namingconstants'
+import { BRANDNAME, BRANDNAMELOGO } from '@/app/constants/namingconstants'
 import Link from 'next/link'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { RxHamburgerMenu } from 'react-icons/rx'
@@ -42,7 +42,7 @@ const Navbar = () => {
                     <div className="d-flex justify-content-between align-items-center">
 
                         <Image src='/images/enzol-logo-trans-bg.png' className='me-1' alt="google icon" width={20} height={30} />
-                        <div className="logo-container"><Link href='/'>{BRANDNAME}</Link></div>
+                        <div className="logo-container"><Link href='/'>{BRANDNAMELOGO}</Link></div>
 
                     </div>
                     <div className="navigators-container d-none d-lg-flex justify-content-center align-items-center">
