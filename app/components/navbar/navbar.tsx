@@ -41,7 +41,7 @@ const Navbar = () => {
                 <div className="d-flex justify-content-between align-items-center w-100">
                     <div className="d-flex justify-content-between align-items-center">
 
-                        <Image src='/images/enzol-logo-trans-bg.png' alt="google icon" width={35} height={35} />
+                        <Image src='/images/enzol-logo-trans-bg.png' alt="google icon" width={30} height={35} />
                         <div className="logo-container"><Link href='/'>{BRANDNAME}</Link></div>
 
                     </div>
@@ -96,7 +96,7 @@ const Navbar = () => {
                 <Offcanvas show={show} onHide={handleClose}>
                     <Offcanvas.Header className='border-bottom' closeButton>
                         <Offcanvas.Title>
-                            <Image src='/images/enzol-logo-trans-bg.png' alt="google icon" width={35} height={35} />
+                            <Image src='/images/enzol-logo-trans-bg.png' alt="google icon" width={30} height={35} />
                             {BRANDNAME}
                         </Offcanvas.Title>
                     </Offcanvas.Header>
