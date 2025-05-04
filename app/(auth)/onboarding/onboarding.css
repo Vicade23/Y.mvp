@@ -107,6 +107,12 @@ input:focus, textarea:focus, select:focus {
   letter-spacing: -0.5px;
 }
 
+@media (max-width: 767px) {
+  .onboarding .main .context-container .welcome-msg {
+    font-size: 20px;
+  }
+}
+
 .onboarding .main .context-container .know-more {
   font-size: 20px;
   margin-bottom: 30px;
@@ -114,11 +120,24 @@ input:focus, textarea:focus, select:focus {
   font-weight: 400;
 }
 
+@media (max-width: 767px) {
+  .onboarding .main .context-container .know-more {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
 .onboarding .main .context-container .work {
   font-size: 20px;
   margin-bottom: 15px;
   letter-spacing: -0.5px;
   font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .onboarding .main .context-container .work {
+    font-size: 16px;
+  }
 }
 
 .onboarding .main .btns-container .col-6 {

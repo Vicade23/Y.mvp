@@ -140,7 +140,7 @@ const Onboarding = () => {
 
 
 
-  return (
+  return ( 
     <div ref={onboarding} className="onboarding" onScroll={handleScroll}>
  
       <main ref={stage01Page} className="main d-flex align-items-center justify-content-center">
