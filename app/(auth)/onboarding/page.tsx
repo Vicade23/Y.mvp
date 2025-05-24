@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react'
 import './onboarding.scss'
 import { BRANDNAME } from '../../constants/namingconstants';
+import Gettingstartedloader from '@/app/components/gettingstartedloader/gettingstartedloader';
 
 const Onboarding = () => {
   const [job, setJob] = useState<string>('')
@@ -9,6 +10,7 @@ const Onboarding = () => {
   const [uses, setUses] = useState<string>('')
   const [awareness, setAwareness] = useState<string>('')
   const [completed, setCompleted] = useState<boolean>(false)
+  const [flowCompleted, setFlowCompleted] = useState<boolean>(false)
 
   const onboarding = useRef<any>()
 
@@ -29,7 +31,7 @@ const Onboarding = () => {
       const { scrollTop, offsetHeight } = onboarding.current;
       const index = Math.round(scrollTop / offsetHeight);
       setCurrent(index)
-      console.log(index)
+      // console.log(index)
     }
   }
 
@@ -134,7 +136,10 @@ const Onboarding = () => {
           prefered_learning_pattern
         }
         console.log(allValues)
-        setCompleted(true)
+        setFlowCompleted(true)
+        setTimeout(() => {
+          setCompleted(true)
+        }, 1000);
       }
     }
 
@@ -142,149 +147,157 @@ const Onboarding = () => {
 
   return ( 
     <div ref={onboarding} className="onboarding" onScroll={handleScroll}>
- 
-      <main ref={stage01Page} className="main d-flex align-items-center justify-content-center">
-        <div className="context-container">
-          <div className='welcome-msg'>Welcome <b>Emmanuel</b>!</div>
-          <h2 className='know-more'>We{`'`}d love to know a bit more about you...</h2>
-          <h2 className='work'>What kind of work do you do?</h2>
-          <div className="select-container w-100 form-input">
 
-            <select ref={stage01FirstSelect} onChange={validateStage1} className="select w-100 form-select-lg">
-              <option value="Education" >Education</option>
-              <option value="User Research">User Research</option>
-              <option value="Agency / Consulting">Agency / Consulting</option>
-              <option value="Business Operations">Business Operations</option>
-              <option value="UI / UX Design">UI / UX Design</option>
-              <option value="Project Management">Project Management</option>
-              <option value="Engineering">Engineering</option>
-              <option value="Sales">Sales</option>
-              <option value="Software Development">Software Development</option>
-            </select>
+      <div className="onboard-container">
+
+        <main ref={stage01Page} className="main d-flex align-items-center justify-content-center">
+          <div className="context-container">
+            <div className='welcome-msg'>Welcome <b>Emmanuel</b>!</div>
+            <h2 className='know-more'>We{`'`}d love to know a bit more about you...</h2>
+            <h2 className='work'>What kind of work do you do?</h2>
+            <div className="select-container w-100 form-input">
+
+              <select ref={stage01FirstSelect} onChange={validateStage1} className="select w-100 form-select-lg">
+                <option value="Education" >Education</option>
+                <option value="User Research">User Research</option>
+                <option value="Agency / Consulting">Agency / Consulting</option>
+                <option value="Business Operations">Business Operations</option>
+                <option value="UI / UX Design">UI / UX Design</option>
+                <option value="Project Management">Project Management</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Sales">Sales</option>
+                <option value="Software Development">Software Development</option>
+              </select>
+            </div>
+            <h2 className='work'>What{`'`}s your role?</h2>
+
+            <div className="select-container w-100 form-input">
+              <select ref={stage01SecondSelect} onChange={validateStage1} className="select w-100 form-select-lg">
+                <option value="" >Select Role</option>
+                <option value="Student" >Student</option>
+                <option value="Team Manager" >Team Manager</option>
+                <option value="Consultant">Consultant</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Contractor / Freelancer">Contractor / Freelancer</option>
+                <option value="Founder / C-Level">Founder / C-Level</option>
+                <option value="Individual Contributor">Individual Contributor</option>
+                <option value="Director">Director</option>
+              </select>
+            </div>
           </div>
-          <h2 className='work'>What{`'`}s your role?</h2>
+        </main>
+        
+        {stage1 && <main ref={stage02Page} className="main d-flex align-items-center justify-content-center">
+          <div className="context-container">
+            <div className='welcome-msg mb-0'>As a <b>{role}</b> in <b>{job}</b>,</div>
+            <h2 className='know-more'>what are you planning to use {BRANDNAME} for?</h2>
 
-          <div className="select-container w-100 form-input">
-            <select ref={stage01SecondSelect} onChange={validateStage1} className="select w-100 form-select-lg">
-              <option value="" >Select Role</option>
-              <option value="Student" >Student</option>
-              <option value="Team Manager" >Team Manager</option>
-              <option value="Consultant">Consultant</option>
-              <option value="Teacher">Teacher</option>
-              <option value="Contractor / Freelancer">Contractor / Freelancer</option>
-              <option value="Founder / C-Level">Founder / C-Level</option>
-              <option value="Individual Contributor">Individual Contributor</option>
-              <option value="Director">Director</option>
-            </select>
+            <div className="btns-container row w-100 mx-auto">
+              <div className="col-6 d-flex align-items-center justify-content-center ps-0">
+                <button id='work' className={`stage-2-select btn border w-100 h-100`} onClick={(e: any) => {confirmSecondStageSelect(e.target)}}>
+                  Work
+                </button>
+              </div>
+              <div className="col-6 d-flex align-items-center justify-content-center pe-0">
+                <button id='personal' className={`stage-2-select btn border w-100 h-100`} onClick={(e: any) => {confirmSecondStageSelect(e.target)}}>
+                  Personal
+                </button>
+              </div>
+              <div className="col-6 d-flex align-items-center justify-content-center ps-0">
+                <button id='community' className={`stage-2-select btn border w-100 h-100`} onClick={(e: any) => {confirmSecondStageSelect(e.target);}}>
+                  Community Building
+                </button>
+              </div>
+              <div className="col-6 d-flex align-items-center justify-content-center pe-0">
+                <button id='education' className={`stage-2-select btn border w-100 h-100`} onClick={(e: any) => {confirmSecondStageSelect(e.target)}}>
+                  Education
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>}
+        
+        {stage2 && stage1 && <main ref={stage03Page} className="main d-flex align-items-center justify-content-center">
+          <div className="context-container">
+            <div className='welcome-msg'>That{`'`}s great!</div>
+            <h2 className='know-more mb-2'>How did you hear about {BRANDNAME}?</h2>
+            <div className="select-container w-100 form-input">
+
+              <select ref={stage03FirstSelect} onChange={validateStage3} className="select w-100 form-select-lg">
+                <option value="friendOrCollegue" >From a collegue / friend</option>
+                <option value="education">User Research</option>
+                <option value="education">Agency / Consulting</option>
+                <option value="education">Business Operations</option>
+                <option value="education">UI / UX Design</option>
+                <option value="education">Project Management</option>
+                <option value="education">Engineering</option>
+                <option value="education">Sales</option>
+                <option value="education">Software Development</option>
+                <option value="education">Other</option>
+              </select>
+            </div>
+
+          </div>
+        </main>}
+        
+        {stage3 && stage2 && stage1 && <main ref={stage04Page} className="main d-flex align-items-center justify-content-center">
+          <div className="context-container">
+            {/* <div className='welcome-msg mb-0'>As a <b>Founder / C-Level</b> in <b>Software development</b>,</div> */}
+            <h2 className='know-more'>How do you prefere to learn?</h2>
+
+            <div className="btns-container row w-100 mx-auto">
+              <div className="col-6 d-flex align-items-center justify-content-center ps-0">
+                <button id='videos' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
+                  Videos
+                </button>
+              </div>
+              <div className="col-6 d-flex align-items-center justify-content-center pe-0">
+                <button id='articles' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
+                  Articles
+                </button>
+              </div>
+              <div className="col-6 d-flex align-items-center justify-content-center ps-0">
+                <button id='interactive_contents' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
+                  Interactive Contents
+                </button>
+              </div>
+              <div className="col-6 d-flex align-items-center justify-content-center pe-0">
+                <button id='group_duscussion' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
+                  Group Duscussion
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>}
+
+        <div className="progress-flow-container mx-auto d-flex align-items-center justify-content-center">
+          <div className="progress-flow-containernext-node d-flex align-items-center justify-content-center">
+
+            <div className="px-1">
+              <div className={`${stage1 && current >= 1 && 'active'} progress-bar`}></div>
+            </div>
+
+            <div className="px-1">
+              <div className={`${stage2 && current >= 2 && 'active'} progress-bar`}></div>
+            </div>
+
+            <div className="px-1">
+              <div className={`${stage3 && current >= 3 && 'active'} progress-bar`}></div>
+            </div>
+
+            <div className="px-1">
+              <div className={`${stage4 && flowCompleted && 'active'} progress-bar`}></div>
+            </div>
+
           </div>
         </div>
-      </main>
-      
-      {stage1 && <main ref={stage02Page} className="main d-flex align-items-center justify-content-center">
-        <div className="context-container">
-          <div className='welcome-msg mb-0'>As a <b>{role}</b> in <b>{job}</b>,</div>
-          <h2 className='know-more'>what are you planning to use {BRANDNAME} for?</h2>
 
-          <div className="btns-container row w-100 mx-auto">
-            <div className="col-6 d-flex align-items-center justify-content-center ps-0">
-              <button id='work' className={`stage-2-select btn border w-100 h-100`} onClick={(e: any) => {confirmSecondStageSelect(e.target)}}>
-                Work
-              </button>
-            </div>
-            <div className="col-6 d-flex align-items-center justify-content-center pe-0">
-              <button id='personal' className={`stage-2-select btn border w-100 h-100`} onClick={(e: any) => {confirmSecondStageSelect(e.target)}}>
-                Personal
-              </button>
-            </div>
-            <div className="col-6 d-flex align-items-center justify-content-center ps-0">
-              <button id='community' className={`stage-2-select btn border w-100 h-100`} onClick={(e: any) => {confirmSecondStageSelect(e.target);}}>
-                Community Building
-              </button>
-            </div>
-            <div className="col-6 d-flex align-items-center justify-content-center pe-0">
-              <button id='education' className={`stage-2-select btn border w-100 h-100`} onClick={(e: any) => {confirmSecondStageSelect(e.target)}}>
-                Education
-              </button>
-            </div>
-          </div>
-        </div>
-      </main>}
-      
-      {stage2 && stage1 && <main ref={stage03Page} className="main d-flex align-items-center justify-content-center">
-        <div className="context-container">
-          <div className='welcome-msg'>That{`'`}s great!</div>
-          <h2 className='know-more mb-2'>How did you hear about {BRANDNAME}?</h2>
-          <div className="select-container w-100 form-input">
-
-            <select ref={stage03FirstSelect} onChange={validateStage3} className="select w-100 form-select-lg">
-              <option value="friendOrCollegue" >From a collegue / friend</option>
-              <option value="education">User Research</option>
-              <option value="education">Agency / Consulting</option>
-              <option value="education">Business Operations</option>
-              <option value="education">UI / UX Design</option>
-              <option value="education">Project Management</option>
-              <option value="education">Engineering</option>
-              <option value="education">Sales</option>
-              <option value="education">Software Development</option>
-              <option value="education">Other</option>
-            </select>
-          </div>
-
-        </div>
-      </main>}
-      
-      {stage3 && stage2 && stage1 && <main ref={stage04Page} className="main d-flex align-items-center justify-content-center">
-        <div className="context-container">
-          {/* <div className='welcome-msg mb-0'>As a <b>Founder / C-Level</b> in <b>Software development</b>,</div> */}
-          <h2 className='know-more'>How do you prefere to learn?</h2>
-
-          <div className="btns-container row w-100 mx-auto">
-            <div className="col-6 d-flex align-items-center justify-content-center ps-0">
-              <button id='videos' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
-                Videos
-              </button>
-            </div>
-            <div className="col-6 d-flex align-items-center justify-content-center pe-0">
-              <button id='articles' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
-                Articles
-              </button>
-            </div>
-            <div className="col-6 d-flex align-items-center justify-content-center ps-0">
-              <button id='interactive_contents' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
-                Interactive Contents
-              </button>
-            </div>
-            <div className="col-6 d-flex align-items-center justify-content-center pe-0">
-              <button id='group_duscussion' className="stage-4-select btn border w-100 h-100" onClick={(e: any) => {confirmForthStageSelect(e.target)}}>
-                Group Duscussion
-              </button>
-            </div>
-          </div>
-        </div>
-      </main>}
-
-      <div className="progress-flow-container mx-auto d-flex align-items-center justify-content-center">
-        <div className="row align-items-center justify-content-center">
-
-          <div className="px-1 col-3">
-            <div className={`${stage1 && current >= 1 && 'active'} progress-bar`}></div>
-          </div>
-
-          <div className="px-1 col-3">
-            <div className={`${stage2 && current >= 2 && 'active'} progress-bar`}></div>
-          </div>
-
-          <div className="px-1 col-3">
-            <div className={`${stage3 && current >= 3 && 'active'} progress-bar`}></div>
-          </div>
-
-          <div className="px-1 col-3">
-            <div className={`${stage4 && completed && 'active'} progress-bar`}></div>
-          </div>
-
-        </div>
       </div>
 
+      {completed && <div className={`gettingstartedloader-container`}>
+        <Gettingstartedloader flowcompleted={completed} />
+      </div>}
+ 
     </div>
   )
 }

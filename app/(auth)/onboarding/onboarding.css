@@ -176,14 +176,14 @@ input:focus, textarea:focus, select:focus {
   width: calc(100% - 8px);
 }
 
-.onboarding .progress-flow-container .row {
+.onboarding .progress-flow-container .progress-flow-containernext-node {
   max-width: 300px;
   width: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .onboarding .progress-flow-container .progress-bar {
-  padding: 2.5px;
+  padding: .4rem;
   background-color: #e2e2e2;
   border-radius: 4px;
 }
