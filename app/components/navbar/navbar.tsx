@@ -41,7 +41,8 @@ const Navbar = () => {
                 <div className="d-flex justify-content-between align-items-center w-100">
                     <div className="d-flex justify-content-between align-items-center">
 
-                        <Image src='/images/enzol-logo3.png' className='me-1' alt="google icon" width={110} height={30} />
+                        <Image src='/images/enzol-logo3.png' className='me-1 d-none d-md-block' alt="google icon" width={110} height={30} />
+                        <Image src='/images/enzol-logo3.png' className='me-1 d-md-none' alt="google icon" width={90} height={25} />
                         {/* <div className="logo-container"><Link href='/'>{BRANDNAMELOGO}</Link></div> */}
 
                     </div>
