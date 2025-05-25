@@ -24,11 +24,11 @@ $text-color: #3d3d4e;
 
 
 .nav-container {
-    height: 90px;
+    height: 60px;
 
 
     .navbar {
-        padding: 12px 0;
+        padding: 0 0;
         box-shadow: none;
         position: fixed;
         top: 0;
@@ -131,7 +131,7 @@ $text-color: #3d3d4e;
         // border-bottom: 0.1rem solid #dee2e6;
     }
     .navbar-2 {
-        padding: 12px 0;
+        padding: 0;
         box-shadow: none;
         position: fixed;
         top: 0;

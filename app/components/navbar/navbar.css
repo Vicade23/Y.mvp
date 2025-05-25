@@ -9,11 +9,11 @@
 }
 
 .nav-container {
-  height: 90px;
+  height: 60px;
 }
 
 .nav-container .navbar {
-  padding: 12px 0;
+  padding: 0 0;
   box-shadow: none;
   position: fixed;
   top: 0;
@@ -108,7 +108,7 @@
 }
 
 .nav-container .navbar-2 {
-  padding: 12px 0;
+  padding: 0;
   box-shadow: none;
   position: fixed;
   top: 0;
