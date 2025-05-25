@@ -97,7 +97,8 @@ const Navbar = () => {
                 <Offcanvas show={show} onHide={handleClose}>
                     <Offcanvas.Header className='border-bottom' closeButton>
                         <Offcanvas.Title>
-                            <Image src='/images/enzol-logo3.png' className='me-1' alt="google icon" width={110} height={30} />
+                            <Image src='/images/enzol-logo3.png' className='me-1 d-none d-md-block' alt="google icon" width={110} height={30} />
+                            <Image src='/images/enzol-logo3.png' className='me-1 d-md-none' alt="google icon" width={90} height={25} />
                             {/* {BRANDNAMELOGO} */}
                         </Offcanvas.Title>
                     </Offcanvas.Header>
